@@ -24,13 +24,13 @@
 #define BTN_R 0x800
 
 class SNESPad{
-	public:
-		SNESPad(unsigned int latch, unsigned int clock, unsigned int data);
-		unsigned int get_buttons();
-	private:
-		unsigned int PIN_LATCH;
-		unsigned int PIN_CLOCK;
-		unsigned int PIN_DATA;
+    public:
+        SNESPad(unsigned int latch, unsigned int clock, unsigned int data);
+        unsigned int get_buttons();
+    private:
+        unsigned int PIN_LATCH;
+        unsigned int PIN_CLOCK;
+        unsigned int PIN_DATA;
 };
 
 #endif
