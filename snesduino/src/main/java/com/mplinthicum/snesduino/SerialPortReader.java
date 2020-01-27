@@ -10,8 +10,8 @@ import java.awt.event.KeyEvent;
 
 public class SerialPortReader implements SerialPortEventListener {
 
-    SerialPort serialPort;
-    Robot robot;
+    private SerialPort serialPort;
+    private Robot robot;
 
     public SerialPortReader(final SerialPort serialPort, Robot robot) {
         this.serialPort = serialPort;
