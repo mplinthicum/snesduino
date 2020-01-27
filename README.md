@@ -14,6 +14,8 @@ The following is a representation of the SNES pad's pin configuration and their 
     4) Data
     7) GND
 
+Reference at [pinoutguide](https://pinoutguide.com/Game/snescontroller_pinout.shtml).
+
 ## Pin Configuration Function
     
     pin_config(latch, clock, data);
