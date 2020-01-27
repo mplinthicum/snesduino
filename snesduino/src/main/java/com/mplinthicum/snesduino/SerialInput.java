@@ -1,10 +1,8 @@
 package com.mplinthicum.snesduino;
 
-import java.awt.AWTException;
 import java.awt.Robot;
 
 import jssc.SerialPort;
-import jssc.SerialPortEvent;
 import jssc.SerialPortException;
 import jssc.SerialPortList;
 
@@ -20,7 +18,7 @@ public class SerialInput {
     public void initialize() {
         String[] serialPortNames = SerialPortList.getPortNames();
         if(serialPortNames.length != 1) {
-            throw new RuntimeException("More than one available serial port...");
+            throw new RuntimeException("Not exactly one available serial port...");
         }
 
         String serialPortName = serialPortNames[0];
@@ -39,7 +37,7 @@ public class SerialInput {
             SerialPortReader serialPortReader = new SerialPortReader(serialPort, robot);
             serialPort.addEventListener(serialPortReader);
         } catch (SerialPortException spe) {
-            System.out.println(spe.toString());
+           throw new RuntimeException(spe.toString());
         }
     }
 }

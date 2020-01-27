@@ -26,7 +26,7 @@ public class SerialPortReader implements SerialPortEventListener {
                 buttonCaptureToKeyPress(input);
             }
             catch (SerialPortException ex) {
-                System.out.println(ex.toString());
+                throw new RuntimeException(ex.toString());
             }
         }
     }

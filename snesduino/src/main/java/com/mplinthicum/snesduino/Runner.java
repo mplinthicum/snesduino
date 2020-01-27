@@ -1,6 +1,6 @@
 package com.mplinthicum.snesduino;
 
-import java.awt.*;
+import java.awt.Robot;
 
 public class Runner {
     public static void main(String[] args) throws Exception {
