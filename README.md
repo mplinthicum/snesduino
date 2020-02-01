@@ -33,19 +33,23 @@ This program prints a capital verison of the button to serial when the button is
 
 ## Quick start
 
-There are two programs included in this repository that must be run simultaneously to achieve functionality.  The first is the program that is flashed onto the ardunio.  At this point in development to flash the program onto the arduino you must open csnesduino/csnesduino.ino in the arduino IDE and flash through the UI.
-
-Once that is running you must run the java code.  Run the following command to compile the code into an uber jar:
+This project makes use of [Arduino-Makefile](https://github.com/sudar/Arduino-Makefile) to flash the program onto the arduino.  To use this you'll need to install the `arduino-mk` package:
 
 ```
-cd sensduino
-mvn clean install
+brew tap sudar/arduino-mk
+brew install arduino-mk
 ```
 
-Then run the code from the command line:
+You'll also need to install pyserial.  The makefile delegates resetting the board to a small python script:
 
 ```
-java -jar target/snesduino-1.0-SNAPSHOT.jar
+pip install pyserial
+```
+
+You can then compile the arduino code, flash it onto the arduino, compile the java code, and run the java code with one make command:
+
+```
+make
 ```
 
 Play games.
