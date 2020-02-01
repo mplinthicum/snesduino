@@ -1,10 +1,8 @@
-# mvn 
-MVN_VERSION := $(shell mvn -f ./snesduino \
-				-q -Dexec.executable="echo" \
-				-Dexec.args='$${project.version}' \
-				--non-recursive exec:exec)
+# mvn vars
+MVN_VERSION := $(shell mvn -f ./snesduino -q -Dexec.executable="echo" -Dexec.args='$${project.version}' --non-recursive exec:exec)
 JAR_NAME := snesduino-$(MVN_VERSION).jar
 
+# arduino vars
 ARDUINO_DIR := /Applications/Arduino.app/Contents/Java
 ARDMK_DIR := /usr/local/Cellar/arduino-mk/1.6.0/
 MONITOR_PORT := /dev/tty.usbmodem*
