@@ -29,7 +29,7 @@ public class SerialInput {
     public void run() {
         try {
             serialPort.openPort();
-            serialPort.setParams(SerialPort.BAUDRATE_9600,
+            serialPort.setParams(SerialPort.BAUDRATE_14400,
                     SerialPort.DATABITS_8,
                     SerialPort.STOPBITS_1,
                     SerialPort.PARITY_NONE);

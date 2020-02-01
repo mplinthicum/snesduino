@@ -16,7 +16,7 @@ boolean pressed_l = false;
 boolean pressed_r = false;
 
 void setup(){
-    Serial.begin(9600);
+    Serial.begin(14400);
 }
 
 void loop(){
