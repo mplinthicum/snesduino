@@ -46,17 +46,10 @@ You'll also need to install pyserial.  The makefile delegates resetting the boar
 pip install pyserial
 ```
 
-Once that is running you must run the java code.  Run the following command to compile the code into an uber jar:
+You can then compile the arduino code, flash it onto the arduino, compile the java code, and run the java code with one make command:
 
 ```
-cd sensduino
-mvn clean install
-```
-
-Then run the code from the command line:
-
-```
-java -jar target/snesduino-1.0-SNAPSHOT.jar
+make
 ```
 
 Play games.
