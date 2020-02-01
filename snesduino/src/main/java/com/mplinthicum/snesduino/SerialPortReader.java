@@ -94,16 +94,16 @@ public class SerialPortReader implements SerialPortEventListener {
                 robot.keyRelease(KeyEvent.VK_L);
                 break;
             case "T":
-                robot.keyPress(KeyEvent.VK_S);
+                robot.keyPress(KeyEvent.VK_T);
                 break;
             case "t":
-                robot.keyRelease(KeyEvent.VK_S);
+                robot.keyRelease(KeyEvent.VK_T);
                 break;
             case "S":
-                robot.keyPress(KeyEvent.VK_D);
+                robot.keyPress(KeyEvent.VK_S);
                 break;
             case "s":
-                robot.keyRelease(KeyEvent.VK_D);
+                robot.keyRelease(KeyEvent.VK_S);
                 break;
         }
     }
