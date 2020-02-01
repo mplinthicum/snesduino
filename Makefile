@@ -3,8 +3,6 @@ MVN_VERSION := $(shell mvn -f ./snesduino -q -Dexec.executable="echo" -Dexec.arg
 JAR_NAME := snesduino-$(MVN_VERSION).jar
 
 # arduino vars
-ARDUINO_DIR := /Applications/Arduino.app/Contents/Java
-ARDMK_DIR := /usr/local/Cellar/arduino-mk/1.6.0/
 MONITOR_PORT := /dev/tty.usbmodem*
 BOARD_TAG := uno
 include /usr/local/opt/arduino-mk/Arduino.mk

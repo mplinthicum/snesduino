@@ -20,10 +20,9 @@ void setup(){
 }
 
 void loop(){
-    unsigned int state;
-    state = pad.get_buttons();
+    unsigned int state = pad.get_buttons();
 
-    if(state & BTN_X && !pressed_x){
+    if(!pressed_x && state & BTN_X){
         pressed_x = true;
         Serial.print("X");
     }
@@ -32,7 +31,7 @@ void loop(){
         Serial.print("x");
     }
 
-    if(state & BTN_Y && !pressed_y){
+    if(!pressed_y && state & BTN_Y){
         pressed_y = true;
         Serial.print("Y");
     }
@@ -41,7 +40,7 @@ void loop(){
         Serial.print("y");
     }
 
-    if(state & BTN_A && !pressed_a){
+    if(!pressed_a && state & BTN_A){
         pressed_a = true;
         Serial.print("A");
     }
@@ -50,7 +49,7 @@ void loop(){
         Serial.print("a");
     }
 
-    if(state & BTN_B && !pressed_b){
+    if(!pressed_b && state & BTN_B){
         pressed_b = true;
         Serial.print("B");
     }
@@ -59,7 +58,7 @@ void loop(){
         Serial.print("b");
     }
 
-    if(state & BTN_R && !pressed_r){
+    if(!pressed_r && state & BTN_R){
         pressed_r = true;
         Serial.print("R");
     }
@@ -68,7 +67,7 @@ void loop(){
         Serial.print("r");
     }
 
-    if(state & BTN_L && !pressed_l){
+    if(!pressed_l && state & BTN_L){
         pressed_l = true;
         Serial.print("L");
     }
@@ -77,7 +76,7 @@ void loop(){
         Serial.print("l");
     }
 
-    if(state & BTN_SELECT && !pressed_select){
+    if(!pressed_select && state & BTN_SELECT){
         pressed_select = true;
         Serial.print("S");
     }
@@ -86,7 +85,7 @@ void loop(){
         Serial.print("s");
     }
 
-    if(state & BTN_START && !pressed_start){
+    if(!pressed_start && state & BTN_START) {
         pressed_start = true;
         Serial.print("T");
     }
@@ -95,7 +94,7 @@ void loop(){
         Serial.print("t");
     }
 
-    if(state & BTN_UP && !pressed_up){
+    if(!pressed_up && state & BTN_UP){
         pressed_up = true;
         Serial.print("U");
     }
@@ -104,7 +103,7 @@ void loop(){
         Serial.print("u");
     }
 
-    if(state & BTN_DOWN && !pressed_down){
+    if(!pressed_down && state & BTN_DOWN){
         pressed_down = true;
         Serial.print("D");
     }
@@ -113,7 +112,7 @@ void loop(){
         Serial.print("d");
     }
 
-    if(state & BTN_LEFT && !pressed_left){
+    if(!pressed_left && state & BTN_LEFT){
         pressed_left = true;
         Serial.print("F");
     }
@@ -122,7 +121,7 @@ void loop(){
         Serial.print("f");
     }
 
-    if(state & BTN_RIGHT && !pressed_right){
+    if(!pressed_right && state & BTN_RIGHT){
         pressed_right = true;
         Serial.print("H");
     }
