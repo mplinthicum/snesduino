@@ -56,17 +56,17 @@ Play games.
 
 ## Keymap
 
-|    SNES      | Keyboard    |
-|--------------|-------------|
-| A            | A           |
-| B            | B           |
-| X            | X           |
-| Y            | Y           |
-| Left Bumper  | L           |
-| Right Bumper | R           |
-| Select       | S           |
-| Start        | T           |
-| Up           | Up Arrow    |
-| Down         | Down Arrow  |
-| Left         | Left Arrow  |
-| Right        | Right Arrow |
+| SNES   | Keyboard    |
+|--------|-------------|
+| Up     | Up Arrow    |
+| Down   | Down Arrow  |
+| Left   | Left Arrow  |
+| Right  | Right Arrow |
+| Select | S           |
+| Start  | T           |
+| A      | A           |
+| B      | B           |
+| X      | X           |
+| Y      | Y           |
+| L      | L           |
+| R      | R           |
