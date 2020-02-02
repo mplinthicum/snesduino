@@ -26,7 +26,7 @@
 class SNESPad{
     public:
         SNESPad(unsigned int latch, unsigned int clock, unsigned int data);
-        unsigned int get_buttons();
+        unsigned int get_state();
     private:
         unsigned int PIN_LATCH;
         unsigned int PIN_CLOCK;

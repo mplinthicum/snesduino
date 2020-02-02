@@ -20,7 +20,7 @@ void setup(){
 }
 
 void loop(){
-    unsigned int state = pad.get_buttons();
+    unsigned int state = pad.get_state();
 
     if(!pressed_x && state & BTN_X){
         pressed_x = true;
