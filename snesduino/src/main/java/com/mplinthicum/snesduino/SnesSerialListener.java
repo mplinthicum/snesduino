@@ -8,16 +8,33 @@ import jssc.SerialPortException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 
-public class SerialPortReader implements SerialPortEventListener {
+/**
+ * A listener to handle snes serial output to a serial port and
+ * translate it to a keystroke.
+ *
+ * @author Michael Linthicum
+ */
+public class SnesSerialListener implements SerialPortEventListener {
 
     private SerialPort serialPort;
     private Robot robot;
 
-    public SerialPortReader(final SerialPort serialPort, Robot robot) {
+    /**
+     *
+     * @param serialPort
+     * @param robot
+     */
+    public SnesSerialListener(final SerialPort serialPort, Robot robot) {
         this.serialPort = serialPort;
         this.robot = robot;
     }
 
+    /**
+     * Reads one byte of information from the serial port as a string
+     * and translates it to a keystroke.
+     *
+     * @param event
+     */
     @Override
     public void serialEvent(SerialPortEvent event) {
         if(event.isRXCHAR()){
@@ -31,6 +48,11 @@ public class SerialPortReader implements SerialPortEventListener {
         }
     }
 
+    /**
+     * Translates a serial output to a key press.
+     *
+     * @param snesInput {@link String} read from the serial port
+     */
     private void buttonCaptureToKeyPress(String snesInput) {
         switch(snesInput) {
             case "A":

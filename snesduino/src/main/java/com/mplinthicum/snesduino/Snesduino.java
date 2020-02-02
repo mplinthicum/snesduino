@@ -6,15 +6,23 @@ import jssc.SerialPort;
 import jssc.SerialPortException;
 import jssc.SerialPortList;
 
-public class SerialInput {
+/**
+ * Handles port creation and connection, and runs the listener.
+ *
+ * @author Michael Linthicum
+ */
+public class Snesduino {
 
     private Robot robot;
     private SerialPort serialPort;
 
-    public SerialInput(final Robot robot) {
+    public Snesduino(final Robot robot) {
         this.robot = robot;
     }
 
+    /**
+     * Gets serial port list and constructs the object interface.
+     */
     public void initialize() {
         String[] serialPortNames = SerialPortList.getPortNames();
         if(serialPortNames.length != 1) {
@@ -26,6 +34,9 @@ public class SerialInput {
         serialPort = new SerialPort(serialPortName);
     }
 
+    /**
+     * Opens port runs the listener.
+     */
     public void run() {
         try {
             serialPort.openPort();
@@ -34,10 +45,10 @@ public class SerialInput {
                     SerialPort.STOPBITS_1,
                     SerialPort.PARITY_NONE);
 
-            SerialPortReader serialPortReader = new SerialPortReader(serialPort, robot);
-            serialPort.addEventListener(serialPortReader);
+            SnesSerialListener snesReader = new SnesSerialListener(serialPort, robot);
+            serialPort.addEventListener(snesReader);
         } catch (SerialPortException spe) {
-           throw new RuntimeException(spe.toString());
+            throw new RuntimeException(spe.toString());
         }
     }
 }
