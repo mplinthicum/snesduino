@@ -5,6 +5,8 @@ JAR_NAME := snesduino-$(MVN_VERSION).jar
 # arduino vars
 MONITOR_PORT := /dev/tty.usbmodem*
 BOARD_TAG := uno
+ARDUINO_LIBS := snespad
+USER_LIB_PATH := .
 include /usr/local/opt/arduino-mk/Arduino.mk
 
 all: upload compile_java run_java
@@ -14,3 +16,6 @@ compile_java:
 
 run_java:
 	java -jar ./snesduino/target/$(JAR_NAME)
+
+clean_all: clean
+	mvn -f ./snesduino clean
